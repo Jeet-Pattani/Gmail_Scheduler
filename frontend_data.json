@@ -1,0 +1,86 @@
+{
+    "sent": [
+        {
+            "id": "d4e49df2-be98-488c-a0b8-e3934a07b428",
+            "recipient": "jety2619@gmail.com",
+            "subject": "This is the test subject 4",
+            "message": "Test message. Lorem Ipsum Dolor Sit amet. Testing for node-scheduler job.",
+            "date": "2024-02-23T17:50",
+            "sentEmail": true
+        },
+        {
+            "id": "264eda56-bc02-47b6-87a7-c17bbbe42d9f",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 5",
+            "message": "Testing of job schedule id check. PRevious problem: Multiple email sending due to loop of job scheduling",
+            "date": "2024-02-23T17:57",
+            "sentEmail": true
+        },
+        {
+            "id": "414ea1a3-1f5f-4398-8431-a90e2257141a",
+            "recipient": "jety2218@gmail.com",
+            "subject": "This is test subject 6",
+            "message": "Testing of email scheduling. Reminder_On_Email. This should be sent and received by jety2218@gmail.com by 23-02-24 18:00",
+            "date": "2024-02-23T18:00",
+            "sentEmail": true
+        },
+        {
+            "id": "aa732756-ecd0-4c43-ac76-03f6131e3448",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 7",
+            "message": "This is an email scheduled to be sent at 23-02-224 18:39. We are hosting the app locally and is made available via ngrok tunneling.",
+            "date": "2024-02-23T18:39",
+            "sentEmail": true
+        },
+        {
+            "id": "e4b8fea1-e29f-4e65-9666-28a036927b9b",
+            "recipient": "kevalindrodiaa@gmail.com",
+            "subject": "Test Email",
+            "message": "This is a test email scheduled to be sent around 23-02-2024 19:05. We use Gmail API with nodejs at backend to send this.",
+            "date": "2024-02-23T19:05",
+            "sentEmail": true
+        }
+    ],
+    "unsent": [
+        {
+            "id": "6009227d-0de3-4b0a-b3ac-a2ec8d25a99e",
+            "recipient": "jety2218@gmail.com",
+            "subject": "THis is test 1",
+            "message": "asfdasd klasdflkl;jasdfklj;",
+            "date": "2024-02-23T17:40",
+            "sentEmail": false
+        },
+        {
+            "id": "f4494454-a4d9-4de5-b20f-b383ed736965",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 2",
+            "message": "This is Lorem Ipsum Dummy Text",
+            "date": "2024-02-23T17:41",
+            "sentEmail": false
+        },
+        {
+            "id": "6dbbe9e4-044b-442a-8f45-ad07232fcb22",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 3",
+            "message": "This is A longer dummy text. This is to check if emails are sent correctly. Lorem ipsum dolor ist",
+            "date": "2024-02-23T17:42",
+            "sentEmail": false
+        },
+        {
+            "id": "42f3db7e-c874-4e8d-bd91-756a4ec96af6",
+            "recipient": "pattanijeet@gmail.com",
+            "subject": "An actual Email Subject",
+            "message": "Main Email Message to be sent to the recipient with the required contents.",
+            "date": "2024-02-23T17:43",
+            "sentEmail": false
+        },
+        {
+            "id": "446750b3-d42c-4441-8e78-59a832b6e997",
+            "recipient": "jety2218@gmail.com",
+            "subject": "This is test subject 5",
+            "message": "Testing of job schedule id check. PRevious problem: Multiple email sending due to loop of job scheduling",
+            "date": "2024-02-23T17:55",
+            "sentEmail": false
+        }
+    ]
+}

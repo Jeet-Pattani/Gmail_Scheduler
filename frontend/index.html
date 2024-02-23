@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email Scheduler</h1>
+        <form id="emailForm" action="/api/saveData" method="post">
+            <label for="recipient">Recipient:</label>
+            <input type="email" id="recipient" name="recipient" required><br><br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <label for="date">Date and Time:</label>
+            <input type="datetime-local" id="date" name="date" required><br><br>
+            <input type="submit" value="Schedule Email">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('emailForm');
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log('Data:', data);
+
+            const responseData = await fetch('/api/saveData', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (responseData.ok) {
+                alert('Email scheduled successfully!');
+                form.reset();
+            } else {
+                alert('Failed to schedule email. Please try again.');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
