@@ -1,4 +1,5 @@
 //emailer.js
+// This version works on singapore based server. 
 // const authorize = require('../Gmail_Scheduler/services/googleApiAuthService');
 // const { sendEmail } = require('../Gmail_Scheduler/services/gmailApiServices');
 const authorize = require('../src/services/googleApiAuthService');
@@ -6,6 +7,7 @@ const { sendEmail } = require('../src/services/gmailApiServices');
 const fs = require('fs').promises;
 const path = require('path');
 const schedule = require('node-schedule');
+const moment = require('moment-timezone');
 
 let scheduledEmails = {}; // Object to store scheduled emails by their IDs
 
@@ -15,16 +17,18 @@ async function loadFileContent() {
     try {
         const fileContent = await fs.readFile(filePath, 'utf8');
         const data = JSON.parse(fileContent);
-        const unsentEmails = data.unsent.filter(email => !email.sentEmail && new Date(email.date) > new Date());
+        const unsentEmails = data.unsent.filter(email => !email.sentEmail);
         unsentEmails.forEach((email) => {
-            const { id, recipient, subject, message, custName,custPhNo, carModel, date } = email;
+            const { id, recipient, subject, message, custName, custPhNo, carModel, date } = email;
             finalMessage = `Message Description: ${message}.\n\n Customer Name: ${custName}\n\n Mobile No.: ${custPhNo}\n\n Car Model: ${carModel}`;
             const msg = `TO: ${recipient}\nSubject: ${subject}\nContent-Type: text/html; charset=utf-8\n\n${finalMessage}`;
             if (!scheduledEmails[id]) { // Check if the email ID is not already scheduled
-                schedule.scheduleJob(date, async () => {
+                const istDate = moment.tz(date, 'Asia/Kolkata'); // Convert date to IST
+                const offset = istDate.diff(moment(), 'milliseconds'); // Calculate offset from current time
+                schedule.scheduleJob(new Date(Date.now() + offset), async () => {
                     try {
-                        await sendEmail(auth, msg);
                         console.log(`Email sent to ${recipient} - Subject: ${subject}`);
+                        await sendEmail(auth, msg);
                         // Update frontend_data.json after sending the email
                         email.sentEmail = true;
                         data.sent.push(email);

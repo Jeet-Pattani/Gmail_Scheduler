@@ -17,9 +17,9 @@ app.get('/', (req, res) => {
 async function saveData(req,res){
     console.log('Received request:', req.body);
 
-    const { recipient, subject, message, date, custName, custPhNo, carModel} = req.body;
+    let { recipient, subject, message, date, custName, custPhNo, carModel} = req.body;
     const sentEmail = false; // Assuming email is not sent initially
-
+    date = date + ' IST';
     // Generate a unique ID
     const id = uuidv4();
 
