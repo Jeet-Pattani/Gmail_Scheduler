@@ -1,3 +1,8 @@
+*{margin: 0;padding: 0;}
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +10,7 @@ body {
     background-image: url('https://images.pexels.com/photos/15400946/pexels-photo-15400946/free-photo-of-a-modern-kia-k5-in-a-garage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,13 +20,15 @@ body {
 .container {
     background-color: rgba(25, 25, 25, 0.685);
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 30px;
     backdrop-filter: blur(10px);
+    margin: 2rem auto;
 }
 
 h1 {
     text-align: center;
     color: #fff;
+    margin: 10px auto 20px;
 }
 
 form {
@@ -29,14 +37,19 @@ form {
     color: #fff;
 }
 
+textarea{
+    resize: vertical;
+}
+
 input[type="email"],
 input[type="text"],
 textarea,
+input[type="number"],
 input[type="datetime-local"],
 input[type="submit"] {
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin: 10px auto 0px;
     border: none;
     border-radius: 5px;
     background-color: rgba(3, 3, 3, 0.598);
@@ -53,4 +66,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Remove up and down buttons in numeric field */
+input[type='number']::-webkit-inner-spin-button{
+    display: none;
+}
+input[type=number]{
+    -moz-appearance: textfield;
 }
