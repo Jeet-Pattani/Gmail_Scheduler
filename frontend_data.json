@@ -1,4 +1,16 @@
 {
-    "sent": [],
+    "sent": [
+        {
+            "id": "ec446fcc-6b76-424e-ae38-551fba1ce721",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "433353323",
+            "carModel": "Demo MOdel",
+            "subject": " Reminder for your Car service",
+            "message": "Demo Message in email\n\nthank you.\n\nwarm regards",
+            "date": "2024-02-27T10:53",
+            "sentEmail": true
+        }
+    ],
     "unsent": []
 }
