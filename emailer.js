@@ -21,7 +21,7 @@ async function loadFileContent() {
             const { id, recipient, subject, message, custName,custPhNo, carModel, date } = email;
             const systemTimeZone = moment.tz.guess();
             const singaporeTime = moment.tz(date, 'Asia/Kolkata').tz(systemTimeZone).format(); // Convert to Singapore time
-            finalMessage = `Message Description: ${message}.\n\n Customer Name: ${custName}\n\n Mobile No.: ${custPhNo}\n\n Car Model: ${carModel}`;
+            finalMessage = `<br>Message Description: ${message}.</br><br> Customer Name: ${custName}</br><br>Mobile No.: ${custPhNo}</br> <br>Car Model: ${carModel}</br>`;
             const msg = `TO: ${recipient}\nSubject: ${subject}\nContent-Type: text/html; charset=utf-8\n\n${finalMessage}`;
             if (!scheduledEmails[id]) { // Check if the email ID is not already scheduled
                 schedule.scheduleJob(singaporeTime, async () => {
