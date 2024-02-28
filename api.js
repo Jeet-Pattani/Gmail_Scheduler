@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
+app.use(cors())
 const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'frontend')));
@@ -59,9 +61,13 @@ async function saveData(req,res){
     res.send('Data saved successfully');
 }
 
-async function getData(req,res){}
+async function getData(req,res){
+    const fileContent = fs.readFileSync('frontend_data.json', 'utf8');
+    res.send(fileContent);
+}
 async function updateData(req,res){}
 async function deleteData(req,res){}
+
 app.post('/api/saveData', saveData);
 app.get('/api/getData', getData);
 app.post('/api/updateData', updateData);

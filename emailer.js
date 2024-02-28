@@ -1,8 +1,8 @@
 //emailer.js
-const authorize = require('../src/services/googleApiAuthService');
-const { sendEmail } = require('../src/services/gmailApiServices');
-// const authorize = require('../Gmail_Scheduler/services/googleApiAuthService');
-// const { sendEmail } = require('../Gmail_Scheduler/services/gmailApiServices');
+// const authorize = require('../src/services/googleApiAuthService');
+// const { sendEmail } = require('../src/services/gmailApiServices');
+const authorize = require('../Gmail_Scheduler/services/googleApiAuthService');
+const { sendEmail } = require('../Gmail_Scheduler/services/gmailApiServices');
 const fs = require('fs').promises;
 const path = require('path');
 const schedule = require('node-schedule');
