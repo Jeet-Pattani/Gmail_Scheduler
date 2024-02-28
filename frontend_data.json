@@ -1,16 +1,185 @@
 {
     "sent": [
         {
-            "id": "ec446fcc-6b76-424e-ae38-551fba1ce721",
+            "id": "d4e49df2-be98-488c-a0b8-e3934a07b428",
+            "recipient": "jety2619@gmail.com",
+            "subject": "This is the test subject 4",
+            "message": "Test message. Lorem Ipsum Dolor Sit amet. Testing for node-scheduler job.",
+            "date": "2024-02-23T17:50",
+            "sentEmail": true
+        },
+        {
+            "id": "264eda56-bc02-47b6-87a7-c17bbbe42d9f",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 5",
+            "message": "Testing of job schedule id check. PRevious problem: Multiple email sending due to loop of job scheduling",
+            "date": "2024-02-23T17:57",
+            "sentEmail": true
+        },
+        {
+            "id": "414ea1a3-1f5f-4398-8431-a90e2257141a",
+            "recipient": "jety2218@gmail.com",
+            "subject": "This is test subject 6",
+            "message": "Testing of email scheduling. Reminder_On_Email. This should be sent and received by jety2218@gmail.com by 23-02-24 18:00",
+            "date": "2024-02-23T18:00",
+            "sentEmail": true
+        },
+        {
+            "id": "aa732756-ecd0-4c43-ac76-03f6131e3448",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 7",
+            "message": "This is an email scheduled to be sent at 23-02-224 18:39. We are hosting the app locally and is made available via ngrok tunneling.",
+            "date": "2024-02-23T18:39",
+            "sentEmail": true
+        },
+        {
+            "id": "e4b8fea1-e29f-4e65-9666-28a036927b9b",
+            "recipient": "kevalindrodiaa@gmail.com",
+            "subject": "Test Email",
+            "message": "This is a test email scheduled to be sent around 23-02-2024 19:05. We use Gmail API with nodejs at backend to send this.",
+            "date": "2024-02-23T19:05",
+            "sentEmail": true
+        },
+        {
+            "id": "ec47674a-0ea5-4f5e-80c1-ec803fd70bc0",
             "recipient": "jety2218@gmail.com",
             "custName": "Jeet Pattani",
-            "custPhNo": "433353323",
-            "carModel": "Demo MOdel",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch 2026",
+            "subject": "Service Reminder",
+            "message": "Hello,\n\nIt has been long due since you shined your car. We have a great offer for you. Ride in and get 20% of on service and ceramic coating. This will lead to a long lasting shine. We welcome you to our studio.",
+            "date": "2024-02-24T15:03",
+            "sentEmail": true
+        },
+        {
+            "id": "854ccd77-59b0-4462-9bb5-f91f0d2e56fd",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch 2026",
+            "subject": "Service Reminder",
+            "message": "Hello,\n\nWelcome to Our Studio. We offer you a 20% discount. Welcome to Our Studio. We offer you a 20% discount. Welcome to Our Studio. We offer you a 20% discount. Welcome to Our Studio. We offer you a 20% discount. \n\nWelcome to Our Studio. We offer you a 20% discount. \n\nThank You",
+            "date": "2024-02-24T15:08",
+            "sentEmail": true
+        },
+        {
+            "id": "ab4a4f73-2860-426b-bab0-118c7089f65d",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch 2026",
+            "subject": "Reminder for Car Service.",
+            "message": "Hello,\n\nIt has been long since your car has had a make over and refreshment. Walk in right away with your ride and get a 20% off on servicing.\n\nHurry Now ! We are waiting for you. ",
+            "date": "2024-02-26T23:40",
+            "sentEmail": true
+        },
+        {
+            "id": "98530619-db6b-4a20-bbae-737b3dfadaeb",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch 2026",
+            "subject": "Reminder for Car Service.",
+            "message": "Hello,\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ",
+            "date": "2024-02-26T23:48",
+            "sentEmail": true
+        },
+        {
+            "id": "c8ccfa5c-ac6e-4a92-b5aa-dcf7c09b6c8f",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979786375",
+            "carModel": "Demo Model",
+            "subject": "Test Subject 9",
+            "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \\\n\n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "date": "2024-02-26T23:59",
+            "sentEmail": true
+        },
+        {
+            "id": "a4451e57-33ae-4f1b-b193-7e4eb9d305f9",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9978865432",
+            "carModel": "Demo Model",
             "subject": " Reminder for your Car service",
-            "message": "Demo Message in email\n\nthank you.\n\nwarm regards",
-            "date": "2024-02-27T10:53",
+            "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. \n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "date": "2024-02-27T00:10",
             "sentEmail": true
         }
     ],
-    "unsent": []
+    "unsent": [
+        {
+            "id": "6009227d-0de3-4b0a-b3ac-a2ec8d25a99e",
+            "recipient": "jety2218@gmail.com",
+            "subject": "THis is test 1",
+            "message": "asfdasd klasdflkl;jasdfklj;",
+            "date": "2024-02-23T17:40",
+            "sentEmail": false
+        },
+        {
+            "id": "f4494454-a4d9-4de5-b20f-b383ed736965",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 2",
+            "message": "This is Lorem Ipsum Dummy Text",
+            "date": "2024-02-23T17:41",
+            "sentEmail": false
+        },
+        {
+            "id": "6dbbe9e4-044b-442a-8f45-ad07232fcb22",
+            "recipient": "jety2218@gmail.com",
+            "subject": "Test Subject 3",
+            "message": "This is A longer dummy text. This is to check if emails are sent correctly. Lorem ipsum dolor ist",
+            "date": "2024-02-23T17:42",
+            "sentEmail": false
+        },
+        {
+            "id": "42f3db7e-c874-4e8d-bd91-756a4ec96af6",
+            "recipient": "pattanijeet@gmail.com",
+            "subject": "An actual Email Subject",
+            "message": "Main Email Message to be sent to the recipient with the required contents.",
+            "date": "2024-02-23T17:43",
+            "sentEmail": false
+        },
+        {
+            "id": "446750b3-d42c-4441-8e78-59a832b6e997",
+            "recipient": "jety2218@gmail.com",
+            "subject": "This is test subject 5",
+            "message": "Testing of job schedule id check. PRevious problem: Multiple email sending due to loop of job scheduling",
+            "date": "2024-02-23T17:55",
+            "sentEmail": false
+        },
+        {
+            "id": "5ca16a4a-a5d4-4e48-bc2f-74a3e04e545d",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch",
+            "subject": "Service Reminder",
+            "message": "Hello,\n\nIt has been days since you've last shined your car. We Welcome you with the offer. Come now and get 20% on Car Service. Hurry The Offer won't last long.",
+            "date": "2024-02-24T14:27",
+            "sentEmail": false
+        },
+        {
+            "id": "be125a4e-f20c-4849-b4ee-43045ecb8d36",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9979967484",
+            "carModel": "Tata Punch 2026",
+            "subject": " Reminder for your Car service",
+            "message": "Hello,\n\nIt has been long since you have serviced your car. We offer you 20% off on our services. \n\nHurry ! get in your ride and let's make it shine again.",
+            "date": "2024-02-26T23:44",
+            "sentEmail": false
+        },
+        {
+            "id": "62c9c79f-2ce7-4060-aca8-45058b8e5a77",
+            "recipient": "jety2218@gmail.com",
+            "custName": "Jeet Pattani",
+            "custPhNo": "9975556474",
+            "carModel": "Test Model 2026",
+            "subject": "Test Subject 10",
+            "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "date": "2024-02-27T00:05",
+            "sentEmail": false
+        }
+    ]
 }

@@ -19,6 +19,7 @@ async function saveData(req,res){
 
     const { recipient, subject, message, date, custName, custPhNo, carModel} = req.body;
     const sentEmail = false; // Assuming email is not sent initially
+
     // Generate a unique ID
     const id = uuidv4();
 
