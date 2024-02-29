@@ -1,8 +1,9 @@
 //emailer.js
-const authorize = require('../src/services/googleApiAuthService');
-const { sendEmail } = require('../src/services/gmailApiServices');
-// const authorize = require('../Gmail_Scheduler/services/googleApiAuthService');
-// const { sendEmail } = require('../Gmail_Scheduler/services/gmailApiServices');
+// const authorize = require('../src/services/googleApiAuthService');
+// const { sendEmail } = require('../src/services/gmailApiServices');
+//emailer.js
+const authorize = require('../Gmail_Scheduler/services/googleApiAuthService');
+const { sendEmail } = require('../Gmail_Scheduler/services/gmailApiServices');
 const fs = require('fs').promises;
 const path = require('path');
 const schedule = require('node-schedule');
@@ -18,10 +19,11 @@ async function loadFileContent() {
         const data = JSON.parse(fileContent);
         const unsentEmails = data.unsent.filter(email => !email.sentEmail);
         unsentEmails.forEach((email) => {
-            const { id, recipient, subject, message, custName,custPhNo, carModel, date } = email;
+            const { id, recipient, subject, message, custName, custPhNo, carModel, date } = email;
             const systemTimeZone = moment.tz.guess();
-            const singaporeTime = moment.tz(date, 'Asia/Kolkata').tz(systemTimeZone).format(); // Convert to Singapore time
-            finalMessage = `<br>Message Description: ${message}.</br><br> Customer Name: ${custName}</br><br>Mobile No.: ${custPhNo}</br> <br>Car Model: ${carModel}</br>`;
+            const singaporeTime = moment.tz(date, 'Asia/Kolkata').tz(systemTimeZone).format(); // Convert to systemTimeZone
+            formattedMessage = message.replace('\n', '<br><br>');
+            finalMessage = `<br>Message Description: ${formattedMessage}.</br><br> Customer Name: ${custName}<br>Mobile No.: ${custPhNo}<br>Car Model: ${carModel}`;
             const msg = `TO: ${recipient}\nSubject: ${subject}\nContent-Type: text/html; charset=utf-8\n\n${finalMessage}`;
             if (!scheduledEmails[id]) { // Check if the email ID is not already scheduled
                 schedule.scheduleJob(singaporeTime, async () => {
@@ -46,10 +48,15 @@ async function loadFileContent() {
     }
 }
 
-// Continuously check for new emails when frontend_data.json updates
-(async () => {
-    while (true) {
+// Function to periodically check for updates in frontend_data.json
+async function checkForUpdates() {
+    setInterval(async () => {
         await loadFileContent();
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 1 minute before checking again
-    }
-})();
+    }, 60000); // Check every minute
+}
+
+// Initial load
+loadFileContent();
+
+// Start checking for updates
+checkForUpdates();
